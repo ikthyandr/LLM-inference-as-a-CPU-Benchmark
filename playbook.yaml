@@ -1,0 +1,32 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: update apt cache and make sure sysbench is installed
+      apt:
+        name: sysbench, python3-pip
+        update_cache: yes
+
+    - name: Copy benchmarking file with permissions
+      ansible.builtin.copy:
+        src: remote_llm_inference/
+        dest: /opt/llm/
+        owner: "{{hostvars[inventory_hostname].ansible_user}}"
+        mode: '0644'
+
+    - name: Copy config file with permissions
+      ansible.builtin.copy:
+        src: config.py
+        dest: /opt/llm/
+        owner: "{{hostvars[inventory_hostname].ansible_user}}"
+        mode: '0644'
+
+
+    - name: install ollama on all machines
+      ansible.builtin.shell:
+        cmd: curl -fsSL https://ollama.com/install.sh | sh -s -- -y
+
+    - name: Install python package ollama
+      ansible.builtin.pip:
+        name: ollama
+
