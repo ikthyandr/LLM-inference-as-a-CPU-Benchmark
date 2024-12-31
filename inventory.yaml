@@ -1,0 +1,22 @@
+arm:
+  hosts:
+    GoogleAxion:
+      ansible_host: x.x.x.x
+      ansible_user: ikthyan
+    AzureCobalt:
+      ansible_host: x.x.x.x
+      ansible_user: azureuser
+    AWSGraviton:
+      ansible_host: x.x.x.x
+      ansible_user: ubuntu
+    AmpereAltra:
+      ansible_host: x.x.x.x
+      ansible_user: ubuntu
+x86:
+  hosts:
+    AMDGenoa:
+      ansible_host: x.x.x.x
+      ansible_user: user 
+    IntelEmerald:
+      ansible_host: x.x.x.x
+      ansible_user: user

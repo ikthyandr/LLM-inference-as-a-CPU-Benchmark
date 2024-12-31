@@ -1,9 +1,42 @@
-# LLM inference for CPU benchmarking
+## LLM inference for CPU benchmarking
 
-This library was initially written to benchmark a bunch of ARM-based cusom silicon. However, this library can be used to benchmark any set of aarch64 or x86_64 servers.
+This benchmark was initially written to benchmark a bunch of ARM-based cusom silicon offered by hyperscale cloud providers. However, this library can be used to benchmark any set of aarch64 or x86_64 servers.
 
-## Ansible inventory
+![LLM inferencing for custom ARM-based silicon](/benchmark_visuals/llm_benchmark.png)
 
-## Running playbook
+#### Experiment setup
+This benchmark was run on target ARM-based and x86_64 chips running ubuntu 22.04.
 
-##  Visualzing the competetive benchmark
+To install the required python dependencies
+
+    > pip install -r requirements.txt
+
+#### Ansible inventory
+'inventory.yaml' contains all the machines to be benchmarked. The inventory is devided in two 'Host Groups':
+    -   arm
+    -   x86
+You can run these benchmarks on either of these two groups or both of the groups at once.
+
+#### Running Ansible playbook
+```console
+ssh-add <your-pem-keyfile-name>
+
+ansible-playbook playbook.yaml -i inventory.yaml
+```
+
+#### Visualzing the competetive benchmark
+To run the experiments on all(i.e. both arm & x86) hosts
+
+```console
+
+python3 benchmarking.py
+
+```
+
+To run the experiments on arm/x86 hosts, like, for ARM-based hosts:
+
+```console
+
+python3 benchmarking.py --host-group arm
+
+```
