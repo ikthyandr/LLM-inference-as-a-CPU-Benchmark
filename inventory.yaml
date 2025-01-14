@@ -2,7 +2,7 @@ arm:
   hosts:
     GoogleAxion:
       ansible_host: x.x.x.x
-      ansible_user: ikthyan
+      ansible_user: ubuntu
     AzureCobalt:
       ansible_host: x.x.x.x
       ansible_user: azureuser

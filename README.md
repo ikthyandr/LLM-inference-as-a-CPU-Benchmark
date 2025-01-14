@@ -4,6 +4,8 @@ This library was initially written to benchmark a bunch of ARM-based cusom silic
 
 ![LLM inferencing for custom ARM-based silicon](/benchmark_visuals/llm_benchmark.png)
 
+The details of this experiment can be found on [my blog post](https://aarch64.cloud/arm-chip-benchmark-test-for-hyperscale-cloud-providers.html).
+
 #### Experiment setup
 This benchmark was run on target ARM-based and x86_64 chips running ubuntu 22.04.
 
