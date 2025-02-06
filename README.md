@@ -1,6 +1,6 @@
 ## LLM inference for ARM-based CPU benchmarking
 
-This library was initially written to benchmark a bunch of ARM-based cusom silicon offered by hyperscale cloud providers. However, this library can be used to benchmark any set of aarch64 or x86_64 servers.
+Initially, I started writing this library to benchmark some Arm-based custom silicon offered by AWS, GCP & Azure. However, this library can be used to benchmark any set of aarch64 or x86_64 servers.
 
 ![LLM inferencing for custom ARM-based silicon](/benchmark_visuals/llm_benchmark.png)
 
@@ -26,10 +26,8 @@ ssh-add <your-pem-keyfile-name>
 ansible-playbook playbook.yaml -i inventory.yaml
 ```
 
-#### Visualzing the competetive benchmark
-These experiments will run llama3.2:3b as the default model. However, it can be changed on 'config.py'.
-
-For only ARM-based host, llama3.2:1b model can be used. While models like llama3.1:7b can be used for both sets of hosts.
+#### Visualizing  the competitive benchmark
+These experiments will run llama3.2:3b as the default model. The default model can be changed on 'config.py'. llama3.2:1b model can be used for only ARM-based host. However, models like llama3.1:7b can be used for both sets of hosts.
 
 To run the experiments on all(i.e. both arm & x86) hosts
 

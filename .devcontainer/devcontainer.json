@@ -1,0 +1,23 @@
+{
+    "name": "CPU Benchmark - Development Environment",
+    "build": {
+      "dockerfile": "../Dockerfile"
+    },
+
+    "workspaceFolder": "/app" ,  // Mount the project folder into the container's /app directory
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "saoudrizwan.claude-dev"
+            ]
+        }
+    },
+    "forwardPorts": [5000],
+    "postCreateCommand": "",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+    ]
+  }
+  
