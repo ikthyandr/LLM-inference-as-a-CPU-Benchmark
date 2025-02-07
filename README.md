@@ -8,11 +8,11 @@ The details of this experiment can be found on [my blog post](https://aarch64.cl
 
 
 #### System reqirements
-The benchmark test was run on servers running on ubuntu 22.04. The minimum recommended memory to run LLM inference tests are:
-    - 4GB RAM for 1 billion parameter models
-    - 6GB RAM for 3 billion parameter models
-    - 12GB RAM for 7 billion parameter models
-
+The benchmark test was run on servers running on ubuntu 22.04. The minimum recommended memory to run LLM inference tests are:\
+    - 4GB RAM for 1 billion parameter models\
+    - 6GB RAM for 3 billion parameter models\
+    - 12GB RAM for 7 billion parameter models\
+\
 The following tests were run on 16GB RAM, irrespective of the model' size.
 
 #### Experiment setup
@@ -24,8 +24,8 @@ To install the required python dependencies
 
 #### Ansible inventory
 'inventory.yaml' contains all the machines to be benchmarked. The inventory is devided in two 'Host Groups':
-    -   arm
-    -   x86
+    -   arm\
+    -   x86\
 You can run these benchmarks on either of these two groups or both of the groups at once.
 
 #### Running Ansible playbook
