@@ -6,6 +6,15 @@ Initially, I started writing this library to benchmark some Arm-based custom sil
 
 The details of this experiment can be found on [my blog post](https://aarch64.cloud/arm-chip-benchmark-test-for-hyperscale-cloud-providers.html).
 
+
+#### System reqirements
+The benchmark test was run on servers running on ubuntu 22.04. The minimum recommended memory to run LLM inference tests are:
+    - 4GB RAM for 1 billion parameter models
+    - 6GB RAM for 3 billion parameter models
+    - 12GB RAM for 7 billion parameter models
+
+The following tests were run on 16GB RAM, irrespective of the model' size.
+
 #### Experiment setup
 This benchmark was run on target ARM-based and x86_64 chips running ubuntu 22.04.
 

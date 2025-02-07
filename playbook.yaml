@@ -21,7 +21,6 @@
         owner: "{{hostvars[inventory_hostname].ansible_user}}"
         mode: '0644'
 
-
     - name: install ollama on all machines
       ansible.builtin.shell:
         cmd: curl -fsSL https://ollama.com/install.sh | sh -s -- -y
