@@ -23,7 +23,7 @@ To install the required python dependencies
     > pip install -r requirements.txt
 
 #### Ansible inventory
-'inventory.yaml' contains all the machines to be benchmarked. The inventory is devided in two 'Host Groups':
+'inventory.yaml' contains all the machines to be benchmarked. The inventory is devided in two 'Host Groups':\
     -   arm\
     -   x86\
 You can run these benchmarks on either of these two groups or both of the groups at once.
