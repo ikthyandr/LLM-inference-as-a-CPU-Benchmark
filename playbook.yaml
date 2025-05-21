@@ -29,3 +29,7 @@
       ansible.builtin.pip:
         name: ollama
 
+    - name: Install python package tiktoken
+      ansible.builtin.pip:
+        name: tiktoken==0.9.0       
+

@@ -199,7 +199,7 @@ def main(args=None):
             ssh.connect(
                 config['ansible_host'],
                 username=config['ansible_user'],
-                key_filename='arm64',
+                key_filename= KEY_FILE,
                 timeout=10
             )
 
